@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สไลด์ 1 - วิทยาลัยสารพัดช่างบรรหาร-แจ่มใส</title>
+<style>
+/* Reset เบื้องต้น */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* Body และ Layout */
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f0f2f5; display:flex; min-height:100vh; }
+
+/* Sidebar */
+.sidebar {
+    width:220px;
+    background:#004080;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    padding:20px 0;
+    position:fixed;
+    height:100%;
+}
+.sidebar h2 { text-align:center; margin-bottom:20px; }
+.sidebar a {
+    color:white;
+    text-decoration:none;
+    padding:10px 20px;
+    display:block;
+    transition:0.3s;
+}
+.sidebar a:hover { background:#0066cc; }
+
+/* Content */
+.content {
+    margin-left:220px;
+    padding:20px 40px;
+    flex:1;
+}
+header { text-align:center; padding:20px; background:white; border-radius:10px; margin-bottom:20px; box-shadow:0 2px 5px rgba(0,0,0,0.2); }
+header h1 { color:#004080; }
+
+/* Main Content */
+main img { max-width:100%; border-radius:10px; margin:20px 0; box-shadow:0 2px 10px rgba(0,0,0,0.2); }
+main h2 { color:#004080; margin-bottom:10px; }
+
+/* Button กลับหน้าหลัก */
+.btn-home {
+    display:inline-block;
+    padding:10px 20px;
+    margin-top:10px;
+    background:#004080;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    transition:0.3s;
+}
+.btn-home:hover { background:#0066cc; }
+
+/* Footer */
+footer {
+    text-align:center;
+    padding:15px;
+    background:#222;
+    color:white;
+    margin-top:20px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+<h2>เมนูสไลด์</h2>
+<a href="slide1.html">1. ชื่อและรูปวิทยาลัย</a>
+<a href="slide2.html">2. หัวข้อและคำสำคัญ</a>
+<a href="slide3.html">3. ประวัติและตราสัญลักษณ์</a>
+<a href="slide4.html">4. ตารางเรียนและจำนวนรับ</a>
+<a href="slide5.html">5. แผนภูมิ 1</a>
+<a href="slide6.html">6. กิจกรรมและบรรยากาศ</a>
+<a href="slide7.html">7. ข้อมูลเข้าศึกษาต่อ</a>
+<a href="slide8.html">8. ผู้จัดทำและติดต่อ</a>
+<a href="index.html">กลับหน้าหลัก</a>
+</div>
+
+<!-- Content -->
+<div class="content">
+<header>
+<h1>วิทยาลัยสารพัดช่างบรรหาร-แจ่มใส</h1>
+</header>
+
+<main>
+<h2>ชื่อและรูปวิทยาลัย</h2>
+<img src="img/fontcl.jpg" alt="รูปวิทยาลัย">
+<p>วิทยาลัยสารพัดช่างบรรหาร-แจ่มใส เป็นสถาบันการศึกษาอาชีวศึกษาที่มุ่งพัฒนาทักษะด้านวิชาชีพและเทคโนโลยีสมัยใหม่ให้นักศึกษา พร้อมทั้งส่งเสริมกิจกรรมและคุณธรรมของนักเรียน</p>
+
+<a href="index.html" class="btn-home">กลับหน้าหลัก</a>
+</main>
+
+<footer>
+&copy; 2025 วิทยาลัยสารพัดช่างบรรหาร-แจ่มใส
+</footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สไลด์ 5 - แผนภูมิ 1 & 2</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display:flex; min-height:100vh; background:#f0f2f5;}
+.sidebar{width:220px;background:#004080;color:white;display:flex;flex-direction:column;padding:20px 0;position:fixed;height:100%;}
+.sidebar h2{text-align:center;margin-bottom:20px;}
+.sidebar a{color:white;text-decoration:none;padding:10px 20px;display:block;transition:0.3s;}
+.sidebar a:hover{background:#0066cc;}
+.content{margin-left:220px;padding:20px 40px;flex:1;text-align:center;}
+header{text-align:center;padding:20px;background:white;border-radius:10px;margin-bottom:20px;box-shadow:0 2px 5px rgba(0,0,0,0.2);}
+header h1{color:#004080;}
+canvas{margin:20px auto; max-width:90%; background:white; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.2);}
+.btn-home{display:inline-block;padding:10px 20px;margin:10px auto;background:#004080;color:white;text-decoration:none;border-radius:5px;transition:0.3s;}
+.btn-home:hover{background:#0066cc;}
+footer{text-align:center;padding:15px;background:#222;color:white;margin-top:20px;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.2);}
+</style>
+</head>
+<body>
+<div class="sidebar">
+<h2>เมนูสไลด์</h2>
+<a href="slide1.html">1</a>
+<a href="slide2.html">2</a>
+<a href="slide3.html">3</a>
+<a href="slide4.html">4</a>
+<a href="slide5.html">5</a>
+<a href="slide6.html">6</a>
+<a href="slide7.html">7</a>
+<a href="slide8.html">8</a>
+<a href="index.html">กลับหน้าหลัก</a>
+</div>
+
+<div class="content">
+<header>
+<h1>แผนภูมิ 1 & 2</h1>
+</header>
+
+<main>
+<h2>แผนภูมิ 1 – จำนวนผู้สนใจสาขาต่าง ๆ</h2>
+<canvas id="chart1" width="400" height="300"></canvas>
+
+<h2>แผนภูมิ 2 – จำนวนรับนักเรียน/นักศึกษาแต่ละสาขา</h2>
+<canvas id="chart2" width="400" height="300"></canvas>
+
+<a href="index.html" class="btn-home">กลับหน้าหลัก</a>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// แผนภูมิ 1
+const ctx1 = document.getElementById('chart1').getContext('2d');
+const chart1 = new Chart(ctx1, {
+    type: 'bar',
+    data: {
+        labels: ['อุตสาหกรรมดนตรี','เทคโนโลยีธุรกิจดิจิทัล','การบัญชี','ช่างไฟฟ้า','เชื่อมโลหะ','เครื่องมือกล','ยานยนต์'],
+        datasets: [{
+            label: 'จำนวนผู้สนใจ',
+            data: [25,75,20,60,30,40,80],
+            backgroundColor: '#004080'
+        }]
+    },
+    options: {
+        responsive:true,
+        plugins:{ legend:{ display:false } },
+        scales: { y: { beginAtZero:true } }
+    }
+});
+
+// แผนภูมิ 2
+const ctx2 = document.getElementById('chart2').getContext('2d');
+const chart2 = new Chart(ctx2, {
+    type: 'bar',
+    data: {
+        labels: ['ยานยนต์','เครื่องมือกล','เชื่อมโลหะ','ไฟฟ้ากำลัง','อิเล็กทรอนิกส์','การบัญชี','เทคโนโลยีธุรกิจดิจิทัล'],
+        datasets: [{
+            label: 'จำนวนรับนักเรียน/นักศึกษา',
+            data: [60,20,20,40,20,50,50],
+            backgroundColor: '#0066cc'
+        }]
+    },
+    options: {
+        responsive:true,
+        plugins:{ legend:{ display:false } },
+        scales: { y: { beginAtZero:true } }
+    }
+});
+</script>
+
+<footer>
+&copy; 2025 วิทยาลัยสารพัดช่างบรรหาร-แจ่มใส
+</footer>
+</div>
+</body>
+</html>
